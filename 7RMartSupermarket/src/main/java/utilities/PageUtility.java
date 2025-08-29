@@ -18,7 +18,7 @@ public class PageUtility {
 		select.selectByIndex(index);
 	}
 	
-	public void selectByValue(WebElement element,String value) {
+	public static void selectByValue(WebElement element,String value) {
 		Select select =new Select(element);
 		select.selectByValue(value);
 	}
@@ -43,7 +43,7 @@ public class PageUtility {
 		action.click(element).perform();
 	}
 	
-	public void scrollBy(WebDriver driver) {
+	public static void scrollBy(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
 	}

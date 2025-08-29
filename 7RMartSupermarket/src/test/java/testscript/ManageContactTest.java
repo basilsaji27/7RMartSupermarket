@@ -1,14 +1,12 @@
 package testscript;
 
 import java.io.IOException;
-
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pages.LoginPage;
 import pages.ManageContactPage;
 import utilities.ExcelUtility;
+import utilities.PageUtility;
 
 public class ManageContactTest extends Base{
 	@Test
@@ -32,8 +30,7 @@ public class ManageContactTest extends Base{
 		managecontactpage.addingAddress(address);
 		managecontactpage.addingDeliveryTime(delivery_time);
 		managecontactpage.addingDeliveryChargeLimit(delivery_charge_limit);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)","");
+		PageUtility.scrollBy(driver);
 		managecontactpage.clickingUpdateBtn();
 		Boolean contactUpdated = managecontactpage.alertValidation();
 		Assert.assertTrue(contactUpdated);

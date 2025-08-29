@@ -1,14 +1,12 @@
 package testscript;
 
 import java.io.IOException;
-
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pages.LoginPage;
 import pages.ManageContactValidationPage;
 import utilities.ExcelUtility;
+import utilities.PageUtility;
 
 public class ManageContactValidationTest extends Base{
 	@Test
@@ -22,8 +20,7 @@ public class ManageContactValidationTest extends Base{
 		ManageContactValidationPage managecontactvalidationpage = new ManageContactValidationPage(driver);
 		managecontactvalidationpage.clickMoreInfoOfManageContact();
 		managecontactvalidationpage.clickContactUsActionBtn();
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)","");
+		PageUtility.scrollBy(driver);
 		Boolean contactUs = managecontactvalidationpage.validateUpdateBtn();
 		Assert.assertTrue(contactUs);
 	}
