@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsUpdatePage {
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class = 'small-box-footer']") WebElement moreInfo;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=7618&page_ad=1']") WebElement manageNewsEditActionBtn;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=7651&page_ad=1']") WebElement manageNewsEditActionBtn;
 	@FindBy(id = "news") WebElement manageNewsTextField;
 	@FindBy(xpath = "//button[@name='update']") WebElement manageNewsUpdateBtn;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement alertBox;

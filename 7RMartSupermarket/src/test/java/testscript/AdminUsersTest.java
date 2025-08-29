@@ -10,7 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class AdminUsersTest extends Base{
-	@Test
+	@Test( retryAnalyzer=retry.Retry.class, description = "Testcase to create a new admin user")
 	public void createAdminUser() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
@@ -18,14 +18,14 @@ public class AdminUsersTest extends Base{
 		loginpage.enterUserName(username);
 		loginpage.enterPassword(password);
 		loginpage.clickSignIn();
-		String adminusername = ExcelUtility.getStringData(4, 0, "AdminUsers");
+		String adminusername = ExcelUtility.getStringData(3, 0, "AdminUsers");
 		String adminpassword = ExcelUtility.getStringData(4, 1, "AdminUsers");
 		AdminUsersPage adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickMoreInfoForAdminUsers();
 		adminuserspage.clickNewActionBtnForAdminUsers();
 		adminuserspage.enterUsernameInAdminUsersInformations(adminusername);
 		adminuserspage.enterPasswordInAdminUsersInformations(adminpassword);
-		adminuserspage.selectUserTypeInAdminUsersInformations("admin");
+		adminuserspage.selectUserTypeInAdminUsersInformations("partner");
 		adminuserspage.clickSaveBtnInAdminUsers();
 		Boolean createdSuccess = adminuserspage.alertValidation();
 		Assert.assertTrue(createdSuccess);
