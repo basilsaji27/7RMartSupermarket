@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base{
 	
-	@Test( retryAnalyzer=retry.Retry.class, description = "User Login with Valid Credentials")
+	@Test( groups = {"regression"}, retryAnalyzer=retry.Retry.class, description = "User Login with Valid Credentials")
 	public void verifyUserIsAbleToLoginUsingValidCredentials() throws IOException {
 		//String username = "admin";
 		//String password = "admin";
