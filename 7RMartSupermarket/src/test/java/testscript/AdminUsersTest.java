@@ -18,8 +18,8 @@ public class AdminUsersTest extends Base{
 		loginpage.enterUserName(username);
 		loginpage.enterPassword(password);
 		loginpage.clickSignIn();
-		String adminusername = ExcelUtility.getStringData(3, 0, "AdminUsers");
-		String adminpassword = ExcelUtility.getStringData(4, 1, "AdminUsers");
+		String adminusername = ExcelUtility.getStringData(2, 0, "AdminUsers");
+		String adminpassword = ExcelUtility.getStringData(2, 1, "AdminUsers");
 		AdminUsersPage adminuserspage = new AdminUsersPage(driver);
 		adminuserspage.clickMoreInfoForAdminUsers();
 		adminuserspage.clickNewActionBtnForAdminUsers();
