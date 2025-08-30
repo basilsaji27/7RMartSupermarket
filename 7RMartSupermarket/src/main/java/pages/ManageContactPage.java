@@ -1,10 +1,11 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import utilities.PageUtility;
 
 public class ManageContactPage {
 	
@@ -55,8 +56,7 @@ public class ManageContactPage {
 	}
 	
 	public void clickingUpdateBtn() {
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", contactUsUpdateBtn);
+		PageUtility.jsClick(driver, contactUsUpdateBtn);
 	}
 	
 	public Boolean alertValidation() {
