@@ -10,7 +10,11 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//a[text() =' New']") WebElement newbtn;
 	@FindBy(xpath = "//textarea[@id = 'news']") WebElement newsdata;
 	@FindBy(xpath = "//button[text() = 'Save']") WebElement clickSave;
-	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement alertBox;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement createNewsAlertBox;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=7666&page_ad=1']") WebElement manageNewsEditActionBtn;
+	@FindBy(id = "news") WebElement manageNewsTextField;
+	@FindBy(xpath = "//button[@name='update']") WebElement manageNewsUpdateBtn;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement updateNewsAlertBox;
 	
 public WebDriver driver;
 	
@@ -36,6 +40,23 @@ public WebDriver driver;
 	}
 	
 	public Boolean alertValidation() {
-		return alertBox.isDisplayed();
+		return createNewsAlertBox.isDisplayed();
+	}
+	
+	public void clickingEditActionBtn() {
+		manageNewsEditActionBtn.click();
+	}
+	
+	public void clickingManageNewsTextField(String updatedNews) {
+		manageNewsTextField.clear();
+		manageNewsTextField.sendKeys(updatedNews);
+	}
+	
+	public void clickingManageNewsUpdateBtn() {
+		manageNewsUpdateBtn.click();
+	}
+	
+	public Boolean alertValidationforNewsUpdates() {
+		return updateNewsAlertBox.isDisplayed();
 	}
 }

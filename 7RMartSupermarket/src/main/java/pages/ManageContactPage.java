@@ -63,4 +63,8 @@ public class ManageContactPage {
 		return alertBox.isDisplayed();
 	}
 	
+	public boolean validateUpdateBtn() {
+		return contactUsUpdateBtn.isEnabled();
+	}
+	
 }

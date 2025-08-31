@@ -50,4 +50,8 @@ public class ManageFooterTextPage {
 	public boolean alertVaidationforFooterTextSuccess() {
 		return manageFooterTextSuccessAlertPopup.isDisplayed();
 	}
+	
+	public boolean validatingUpdateBtn() {
+		return manageFooterTextUpdateBtn.isEnabled();
+	}
 }

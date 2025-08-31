@@ -35,4 +35,20 @@ public class ManageContactTest extends Base{
 		Boolean contactUpdated = managecontactpage.alertValidation();
 		Assert.assertTrue(contactUpdated);
 	}
+	
+	@Test( retryAnalyzer=retry.Retry.class, description = "TC for verifying Update button enabled or not")
+	public void validateUpdateBtnAvailable() throws IOException {
+		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
+		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.enterUserName(username);
+		loginpage.enterPassword(password);
+		loginpage.clickSignIn();
+		ManageContactPage managecontactpage = new ManageContactPage(driver);
+		managecontactpage.clickMoreInfoOfManageContact();
+		managecontactpage.clickContactUsActionBtn();
+		PageUtility.scrollBy(driver);
+		Boolean contactUs = managecontactpage.validateUpdateBtn();
+		Assert.assertTrue(contactUs);
+	}
 }
