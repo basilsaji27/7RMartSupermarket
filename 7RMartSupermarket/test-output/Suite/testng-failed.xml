@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testscript.ManageNewsTest">
+        <methods>
+          <include name="browserInitialization"/>
+          <include name="updateExistingNews"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.ManageNewsTest -->
+      <class name="testscript.AdminUsersTest">
+        <methods>
+          <include name="createAdminUser"/>
+          <include name="browserInitialization"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.AdminUsersTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

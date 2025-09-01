@@ -4,15 +4,15 @@
   <test thread-count="5" name="ChromeTest">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="testscript.ManageContactTest"/>
-      <class name="testscript.ManageContactValidationTest"/>
+      <class name="testscript.LoginTest"/>
+      <class name="testscript.LogoutTest"/>
     </classes>
   </test> <!-- Test -->
   <test name="FirefoxTest">
   <parameter name="browser" value="firefox"></parameter>
   <classes>
-     <class name="testscript.ManageContactTest"/>
-     <class name="testscript.ManageContactValidationTest"/>
+     <class name="testscript.LoginTest"/>
+      <class name="testscript.LogoutTest"/>
   </classes>
   </test>
 </suite> <!-- Suite -->
