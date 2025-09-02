@@ -35,12 +35,13 @@ public class AdminUsersPage {
 		passwordFieldAdminUsers.sendKeys(password);
 	}
 	public void selectUserTypeInAdminUsersInformations(String value) {
-		PageUtility.selectByValue(userTypeFieldAdminUsers,value);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.selectByValue(userTypeFieldAdminUsers, value);
 	}
 	public void clickSaveBtnInAdminUsers() {
 		saveBtnAdminUsers.click();
 	}
-	public Boolean alertValidation() {
+	public boolean alertValidation() {
 		return alertUserCreatedSuccess.isDisplayed();
 	}
 }

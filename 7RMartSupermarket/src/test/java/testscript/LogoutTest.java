@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
 import utilities.ExcelUtility;
@@ -22,7 +23,7 @@ public class LogoutTest extends Base{
 		LogoutPage logoutpage = new LogoutPage(driver);
 		logoutpage.clickAdminButtonInHomePage();
 		logoutpage.clickLogoutButton();
-		Boolean loginpagescreen = logoutpage.validateLoginPage();
-		Assert.assertTrue(loginpagescreen);
+		boolean loginpagescreen = logoutpage.validateLoginPage();
+		Assert.assertTrue(loginpagescreen,Constant.LOGOUT);
 	}
 }

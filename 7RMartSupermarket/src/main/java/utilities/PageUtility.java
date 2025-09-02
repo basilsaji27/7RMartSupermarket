@@ -18,7 +18,7 @@ public class PageUtility {
 		select.selectByIndex(index);
 	}
 	
-	public static void selectByValue(WebElement element,String value) {
+	public void selectByValue(WebElement element,String value) {
 		Select select =new Select(element);
 		select.selectByValue(value);
 	}
@@ -43,13 +43,23 @@ public class PageUtility {
 		action.click(element).perform();
 	}
 	
-	public static void scrollBy(WebDriver driver) {
+	public void scrollBy(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
 	}
 	
-	public static void jsClick(WebDriver driver, WebElement element) {
+	public void scrollIntoView(WebDriver driver, WebElement element) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+	
+	public void jsClick(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",element );
+	}
+	
+	public void jsSendKeys(WebDriver driver, WebElement element, String text) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].value='" + text + "';", element);
 	}
 }

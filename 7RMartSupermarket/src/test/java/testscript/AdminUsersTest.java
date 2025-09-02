@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -27,7 +28,7 @@ public class AdminUsersTest extends Base{
 		adminuserspage.enterPasswordInAdminUsersInformations(adminpassword);
 		adminuserspage.selectUserTypeInAdminUsersInformations("partner");
 		adminuserspage.clickSaveBtnInAdminUsers();
-		Boolean createdSuccess = adminuserspage.alertValidation();
-		Assert.assertTrue(createdSuccess);
+		boolean createdSuccess = adminuserspage.alertValidation();
+		Assert.assertTrue(createdSuccess,Constant.ADMINUSERCREATION);
 	}
 }

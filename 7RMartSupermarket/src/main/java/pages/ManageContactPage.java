@@ -31,6 +31,8 @@ public class ManageContactPage {
 	}
 	public void clickContactUsActionBtn() {
 		contactUsActionBtn.click();
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollBy(driver);
 	}
 	public void addingPhone(String phone) {
 		contactUsPhoneTextField.clear();
@@ -53,13 +55,16 @@ public class ManageContactPage {
 	public void addingDeliveryChargeLimit(String delivery_charge_limit) {
 		contactUsDeliveryChargeLimit.clear();
 		contactUsDeliveryChargeLimit.sendKeys(delivery_charge_limit);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollBy(driver);
 	}
 	
 	public void clickingUpdateBtn() {
-		PageUtility.jsClick(driver, contactUsUpdateBtn);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.jsClick(driver, contactUsUpdateBtn);
 	}
 	
-	public Boolean alertValidation() {
+	public boolean alertValidation() {
 		return alertBox.isDisplayed();
 	}
 	

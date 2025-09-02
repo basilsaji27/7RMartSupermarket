@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="classes" name="Failed suite [Multi Browser Testing]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="classes" name="FirefoxTest(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" parallel="classes" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testscript.ManageContactTest">
+      <class name="testscript.LoginTest">
         <methods>
-          <include name="managingContactDetails"/>
+          <include name="browserInitialization"/>
+          <include name="verifyUserIsAbleToLoginUsingValidCredentials"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.LoginTest -->
+      <class name="testscript.LogoutTest">
+        <methods>
+          <include name="verifyUserLogout"/>
           <include name="browserInitialization"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- testscript.ManageContactTest -->
+      </class> <!-- testscript.LogoutTest -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Multi Browser Testing] -->

@@ -26,7 +26,7 @@ public class LogoutPage {
 		logout.click();
 	}
 	
-	public Boolean validateLoginPage() {
+	public boolean validateLoginPage() {
 		return signin.isDisplayed();
 	}
 }

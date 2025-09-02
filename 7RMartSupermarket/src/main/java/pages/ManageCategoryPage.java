@@ -26,7 +26,8 @@ public class ManageCategoryPage {
 	}
 	
 	public void clickingMoreInfoForManageCategory() {
-		PageUtility.jsClick(driver, moreInfoForManageCategory);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.jsClick(driver, moreInfoForManageCategory);
 	}
 	
 	public void clickingNewInManageCategory() {
@@ -39,6 +40,8 @@ public class ManageCategoryPage {
 	
 	public void selectCategoryGroup() {
 		selectgrpField.click();
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollBy(driver);
 	}
 	
 	/*public void selectCategoryGroup(String value) {
@@ -46,14 +49,16 @@ public class ManageCategoryPage {
 	}*/
 	
 	public void categoryImageUpload() {
-		FileUploadUtility.fileUploadUsingSendKeys(imgUpload, Constant.TESTIMAGEFILE);
+		FileUploadUtility fileUploadUtility = new FileUploadUtility();
+		fileUploadUtility.fileUploadUsingSendKeys(imgUpload, Constant.TESTIMAGEFILE);
 	}
 	
 	public void clickingSavebtn() {
-		PageUtility.jsClick(driver, addCategorySaveBtn);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.jsClick(driver, addCategorySaveBtn);
 	}
 	
-	public Boolean alertValidation() {
+	public boolean alertValidation() {
 		return alertCategoryCreatedSuccess.isDisplayed();
 	}
 }

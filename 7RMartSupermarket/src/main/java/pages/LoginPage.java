@@ -39,7 +39,7 @@ public class LoginPage {
 	}
 	
 	//For validating the alert popup showing for invalid cases
-	public Boolean alertValidation() {
+	public boolean alertValidation() {
 		return alertBox.isDisplayed();
 	}
 	

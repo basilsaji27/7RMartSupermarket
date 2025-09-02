@@ -3,13 +3,14 @@ package testscript;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import constant.Constant;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base{
 	
-	@Test( retryAnalyzer=retry.Retry.class, description = "TC for adding new news")
+	@Test( retryAnalyzer=retry.Retry.class, description = "Testcase for creating new news")
 	public void creatingnewNews() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
@@ -23,11 +24,11 @@ public class ManageNewsTest extends Base{
 		managenewspage.clickingNewInManageNews();
 		managenewspage.enteringNews(textdata);
 		managenewspage.clickingSaveOfNews();
-		Boolean newsAdded = managenewspage.alertValidation();
-		Assert.assertTrue(newsAdded);
+		boolean newsAdded = managenewspage.alertValidation();
+		Assert.assertTrue(newsAdded,Constant.MANAGENEWSCREATION);
 	}
 	
-	@Test( retryAnalyzer=retry.Retry.class, description = "TC for updating news")
+	@Test( retryAnalyzer=retry.Retry.class, description = "Testcase for updating news")
 	public void updateExistingNews() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
@@ -41,7 +42,7 @@ public class ManageNewsTest extends Base{
 		managenewspage.clickingEditActionBtn();
 		managenewspage.clickingManageNewsTextField(updatedNews);
 		managenewspage.clickingManageNewsUpdateBtn();
-		Boolean newsUpdated = managenewspage.alertValidationforNewsUpdates();
-		Assert.assertTrue(newsUpdated);
+		boolean newsUpdated = managenewspage.alertValidationforNewsUpdates();
+		Assert.assertTrue(newsUpdated,Constant.MANAGENEWSUPDATION);
 	}
 }

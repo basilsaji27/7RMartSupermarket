@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageFooterTextPage {
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer'] ") WebElement moreInfoManageFooterText;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=2']") WebElement manageFooterTextActionBtn2;
@@ -24,8 +26,10 @@ public class ManageFooterTextPage {
 		moreInfoManageFooterText.click();
 	}
 	
-	public void clickingFooterTextActionBtb() {
+	public void clickingFooterTextActionBtn() {
 		manageFooterTextActionBtn2.click();
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollBy(driver);
 	}
 	
 	public void clickingAddressFieldinFooterTextInformationsPage(String newAddress) {

@@ -3,13 +3,14 @@ package testscript;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import constant.Constant;
 import pages.LoginPage;
 import pages.ManageContactPage;
 import utilities.ExcelUtility;
-import utilities.PageUtility;
 
 public class ManageContactTest extends Base{
-	@Test( retryAnalyzer=retry.Retry.class, description = "TC for updating contact details")
+	@Test( retryAnalyzer=retry.Retry.class, description = "Testcase for updating contact details")
 	public void managingContactDetails() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
@@ -30,10 +31,9 @@ public class ManageContactTest extends Base{
 		managecontactpage.addingAddress(address);
 		managecontactpage.addingDeliveryTime(delivery_time);
 		managecontactpage.addingDeliveryChargeLimit(delivery_charge_limit);
-		PageUtility.scrollBy(driver);
 		managecontactpage.clickingUpdateBtn();
-		Boolean contactUpdated = managecontactpage.alertValidation();
-		Assert.assertTrue(contactUpdated);
+		boolean contactUpdated = managecontactpage.alertValidation();
+		Assert.assertTrue(contactUpdated,Constant.MANAGECONTACT);
 	}
 	
 	@Test( retryAnalyzer=retry.Retry.class, description = "TC for verifying Update button enabled or not")
@@ -47,8 +47,7 @@ public class ManageContactTest extends Base{
 		ManageContactPage managecontactpage = new ManageContactPage(driver);
 		managecontactpage.clickMoreInfoOfManageContact();
 		managecontactpage.clickContactUsActionBtn();
-		PageUtility.scrollBy(driver);
-		Boolean contactUs = managecontactpage.validateUpdateBtn();
-		Assert.assertTrue(contactUs);
+		boolean contactUs = managecontactpage.validateUpdateBtn();
+		Assert.assertTrue(contactUs,Constant.MANAGECONTACTBUTTON);
 	}
 }
