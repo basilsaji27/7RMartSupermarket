@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtility;
 
 public class ManageFooterTextPage {
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer'] ") WebElement moreInfoManageFooterText;
+	//@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer'] ") WebElement moreInfoManageFooterText;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=2']") WebElement manageFooterTextActionBtn2;
 	@FindBy(id = "content") WebElement manageFooterTextAddressField;
 	@FindBy(id = "email") WebElement manageFooterTextEmailField;
@@ -22,33 +22,38 @@ public class ManageFooterTextPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickingMoreInfoForManageFooterText() {
+	/*public void clickingMoreInfoForManageFooterText() {
 		moreInfoManageFooterText.click();
-	}
+	}*/
 	
-	public void clickingFooterTextActionBtn() {
+	public ManageFooterTextPage clickingFooterTextActionBtn() {
 		manageFooterTextActionBtn2.click();
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.scrollBy(driver);
+		return this;
 	}
 	
-	public void clickingAddressFieldinFooterTextInformationsPage(String newAddress) {
+	public ManageFooterTextPage clickingAddressFieldinFooterTextInformationsPage(String newAddress) {
 		manageFooterTextAddressField.clear();
 		manageFooterTextAddressField.sendKeys(newAddress);
+		return this;
 	}
 	
-	public void clickingEmailFieldinFooterTextInformationsPage(String newEmail) {
+	public ManageFooterTextPage clickingEmailFieldinFooterTextInformationsPage(String newEmail) {
 		manageFooterTextEmailField.clear();
 		manageFooterTextEmailField.sendKeys(newEmail);
+		return this;
 	}
 	
-	public void clickingPhoneFieldinFooterTextInformationsPage(String newPhone) {
+	public ManageFooterTextPage clickingPhoneFieldinFooterTextInformationsPage(String newPhone) {
 		manageFooterTextPhoneField.clear();
 		manageFooterTextPhoneField.sendKeys(newPhone);
+		return this;
 	}
 	
-	public void clickingUpdateBtninFooterTextInformationsPage() {
+	public ManageFooterTextPage clickingUpdateBtninFooterTextInformationsPage() {
 		manageFooterTextUpdateBtn.click();
+		return this;
 	}
 	
 	public boolean alertVaidationforFooterTextSuccess() {

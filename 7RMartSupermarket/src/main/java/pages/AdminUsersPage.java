@@ -9,7 +9,7 @@ import utilities.PageUtility;
 
 public class AdminUsersPage {
 	
-	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-admin']") WebElement moreInfoForAdminUsers;
+	//@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-admin']") WebElement moreInfoForAdminUsers;
 	@FindBy(xpath = "//a[@onclick='click_button(1)']") WebElement newActionBtnAdminUsers;
 	@FindBy(id = "username") WebElement usernameFieldAdminUsers;
 	@FindBy(id = "password") WebElement passwordFieldAdminUsers;
@@ -22,24 +22,29 @@ public class AdminUsersPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this); 
 	}
-	public void clickMoreInfoForAdminUsers() {
+	/*public void clickMoreInfoForAdminUsers() {
 		moreInfoForAdminUsers.click();
-	}
-	public void clickNewActionBtnForAdminUsers() {
+	}*/
+	public AdminUsersPage clickNewActionBtnForAdminUsers() {
 		newActionBtnAdminUsers.click();
+		return this;
 	}
-	public void enterUsernameInAdminUsersInformations(String username) {
+	public AdminUsersPage enterUsernameInAdminUsersInformations(String username) {
 		usernameFieldAdminUsers.sendKeys(username);
+		return this;
 	}
-	public void enterPasswordInAdminUsersInformations(String password) {
+	public AdminUsersPage enterPasswordInAdminUsersInformations(String password) {
 		passwordFieldAdminUsers.sendKeys(password);
+		return this;
 	}
-	public void selectUserTypeInAdminUsersInformations(String value) {
+	public AdminUsersPage selectUserTypeInAdminUsersInformations(String value) {
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.selectByValue(userTypeFieldAdminUsers, value);
+		return this;
 	}
-	public void clickSaveBtnInAdminUsers() {
+	public AdminUsersPage clickSaveBtnInAdminUsers() {
 		saveBtnAdminUsers.click();
+		return this;
 	}
 	public boolean alertValidation() {
 		return alertUserCreatedSuccess.isDisplayed();

@@ -9,7 +9,7 @@ import utilities.PageUtility;
 
 public class ManageContactPage {
 	
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class='small-box-footer']") WebElement moreInfoBtnManageContact;
+	//@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class='small-box-footer']") WebElement moreInfoBtnManageContact;
 	@FindBy(xpath = "//a[@role='button']") WebElement contactUsActionBtn;
 	@FindBy(xpath = "//button[text() =' Update']") WebElement contactUsUpdateBtn;
 	@FindBy(id = "phone") WebElement contactUsPhoneTextField;
@@ -26,42 +26,51 @@ public class ManageContactPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void clickMoreInfoOfManageContact() {
+	/*public void clickMoreInfoOfManageContact() {
 		moreInfoBtnManageContact.click();
-	}
-	public void clickContactUsActionBtn() {
+	}*/
+	public ManageContactPage clickContactUsActionBtn() throws Exception {
 		contactUsActionBtn.click();
-		PageUtility pageUtility = new PageUtility();
-		pageUtility.scrollBy(driver);
+		//Thread.sleep(2000);
+		return this;
 	}
-	public void addingPhone(String phone) {
+	public ManageContactPage addingPhone(String phone) {
 		contactUsPhoneTextField.clear();
-		contactUsPhoneTextField.sendKeys(phone);
+		//contactUsPhoneTextField.sendKeys(phone);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.jsSendKeys(driver, contactUsPhoneTextField, phone);
+		pageUtility.scrollFromTop(driver);
+		return this;
 	}
-	public void addingEmail(String email) {
+	public ManageContactPage addingEmail(String email) {
 		contactUsEmailIdTextField.clear();
 		contactUsEmailIdTextField.sendKeys(email);
+		return this;
 	}
-	public void addingAddress(String address) {
+	public ManageContactPage addingAddress(String address) {
 		contactUsAddress.clear();
 		contactUsAddress.sendKeys(address);
+		return this;
 	}
 	
-	public void addingDeliveryTime(String delivery_time) {
+	public ManageContactPage addingDeliveryTime(String delivery_time) {
 		contactUsDeliveryTime.clear();
 		contactUsDeliveryTime.sendKeys(delivery_time);
+		return this;
 	}
 	
-	public void addingDeliveryChargeLimit(String delivery_charge_limit) {
+	public ManageContactPage addingDeliveryChargeLimit(String delivery_charge_limit) {
 		contactUsDeliveryChargeLimit.clear();
 		contactUsDeliveryChargeLimit.sendKeys(delivery_charge_limit);
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.scrollBy(driver);
+		return this;
 	}
 	
-	public void clickingUpdateBtn() {
+	public ManageContactPage clickingUpdateBtn() {
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.jsClick(driver, contactUsUpdateBtn);
+		return this;
 	}
 	
 	public boolean alertValidation() {

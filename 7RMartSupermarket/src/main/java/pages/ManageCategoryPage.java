@@ -25,37 +25,43 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver, this); 
 	}
 	
-	public void clickingMoreInfoForManageCategory() {
+	/*public void clickingMoreInfoForManageCategory() {
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.jsClick(driver, moreInfoForManageCategory);
-	}
+	}*/
 	
-	public void clickingNewInManageCategory() {
+	public ManageCategoryPage clickingNewInManageCategory() {
 		newActionBtnInCategory.click();
+		return this;
 	}
 	
-	public void addCategoryName(String categoryName) {
+	public ManageCategoryPage addCategoryName(String categoryName) {
 		addCategoryField.sendKeys(categoryName);
+		return this;
 	}
 	
-	public void selectCategoryGroup() {
+	public ManageCategoryPage selectCategoryGroup() {
 		selectgrpField.click();
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.scrollBy(driver);
+		return this;
 	}
 	
 	/*public void selectCategoryGroup(String value) {
 		PageUtility.selectByValue(selectgrpField,value);
 	}*/
 	
-	public void categoryImageUpload() {
+	public ManageCategoryPage categoryImageUpload() {
 		FileUploadUtility fileUploadUtility = new FileUploadUtility();
 		fileUploadUtility.fileUploadUsingSendKeys(imgUpload, Constant.TESTIMAGEFILE);
+		return this;
 	}
 	
-	public void clickingSavebtn() {
+	public ManageCategoryPage clickingSavebtn() {
 		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollIntoView(driver, addCategorySaveBtn);
 		pageUtility.jsClick(driver, addCategorySaveBtn);
+		return this;
 	}
 	
 	public boolean alertValidation() {

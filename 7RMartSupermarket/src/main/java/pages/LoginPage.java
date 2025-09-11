@@ -20,16 +20,19 @@ public class LoginPage {
 		PageFactory.initElements(driver, this); //PageFactory - To initialise web elements
 	}
 	
-	public void enterUserName(String username) {
+	public LoginPage enterUserName(String username) {
 		uname.sendKeys(username);
+		return this;
 	}
 	
-	public void enterPassword(String password) {
+	public LoginPage enterPassword(String password) {
 		pwd.sendKeys(password);
+		return this;
 	}
 	
-	public void clickSignIn() {
+	public LogoutPage clickSignIn() {
 		signin.click();
+		return new LogoutPage(driver);
 	}
 	
 	//For validating the login success 

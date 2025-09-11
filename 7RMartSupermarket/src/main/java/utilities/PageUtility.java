@@ -23,7 +23,7 @@ public class PageUtility {
 		select.selectByValue(value);
 	}
 	
-	public void contextClick(WebDriver driver, WebElement element) {
+	public void rightContextClick(WebDriver driver, WebElement element) {
 		Actions action = new Actions(driver);
 		action.contextClick(element).perform();
 	}
@@ -43,9 +43,24 @@ public class PageUtility {
 		action.click(element).perform();
 	}
 	
+	public void doubleClick(WebDriver driver,WebElement target){
+		Actions action=new Actions(driver);
+		action.doubleClick(target);
+	}
+	
 	public void scrollBy(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
+	}
+	
+	public void scrollFromTop(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,150)", "");
+	}
+	
+	public void scrollFromBottom(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-150)", "");
 	}
 	
 	public void scrollIntoView(WebDriver driver, WebElement element) {

@@ -8,73 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Multi Browser Testing</th></tr>
-<tr><td><a href="#t0">ChromeTest</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">18,804</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">30,726</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">10</th><th class="num">0</th><th class="num attn">2</th><th class="num">0</th><th class="num">49,530</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11,187</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Multi Browser Testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">testscript.LoginTest</td><td><a href="#m0">verifyUserIsAbleToLoginUsingValidCredentials</a></td><td rowspan="1">1756741209735</td><td rowspan="1">415</td></tr><tr class="retriedodd"><td rowspan="1">testscript.LogoutTest</td><td><a href="#m1">verifyUserLogout</a></td><td rowspan="1">1756741209832</td><td rowspan="1">219</td></tr><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testscript.LoginTest</td><td><a href="#m2">verifyUserIsAbleToLoginUsingValidCredentials</a></td><td rowspan="1">1756741213167</td><td rowspan="1">2543</td></tr><tr class="passedeven"><td><a href="#m3">verifyUserLoginWithInvalidUsernameInvalidPassword</a></td><td rowspan="1">1756741218180</td><td rowspan="1">749</td></tr><tr class="passedeven"><td><a href="#m4">verifyUserLoginWithInvalidUsernameValidPassword</a></td><td rowspan="1">1756741221108</td><td rowspan="1">835</td></tr><tr class="passedeven"><td><a href="#m5">verifyUserloginWithValidUsernameInvalidPassword</a></td><td rowspan="1">1756741224164</td><td rowspan="1">735</td></tr><tr class="passedodd"><td rowspan="1">testscript.LogoutTest</td><td><a href="#m6">verifyUserLogout</a></td><td rowspan="1">1756741213469</td><td rowspan="1">2927</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testscript.LoginTest</td><td><a href="#m7">verifyUserIsAbleToLoginUsingValidCredentials</a></td><td rowspan="1">1756741231877</td><td rowspan="1">1080</td></tr><tr class="passedeven"><td><a href="#m8">verifyUserLoginWithInvalidUsernameInvalidPassword</a></td><td rowspan="1">1756741240274</td><td rowspan="1">521</td></tr><tr class="passedeven"><td><a href="#m9">verifyUserLoginWithInvalidUsernameValidPassword</a></td><td rowspan="1">1756741247591</td><td rowspan="1">546</td></tr><tr class="passedeven"><td><a href="#m10">verifyUserloginWithValidUsernameInvalidPassword</a></td><td rowspan="1">1756741254333</td><td rowspan="1">544</td></tr><tr class="passedodd"><td rowspan="1">testscript.LogoutTest</td><td><a href="#m11">verifyUserLogout</a></td><td rowspan="1">1756741231194</td><td rowspan="1">2107</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testscript.ManageContactTest</td><td><a href="#m0">managingContactDetails</a></td><td rowspan="1">1757621114434</td><td rowspan="1">4456</td></tr><tr class="passedeven"><td><a href="#m1">validateUpdateBtnAvailable</a></td><td rowspan="1">1757621121080</td><td rowspan="1">1571</td></tr></tbody>
 </table>
-<h2>ChromeTest</h2><h3 id="m0">testscript.LoginTest#verifyUserIsAbleToLoginUsingValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.IOException: Stream Closed
-	at java.base/java.io.FileInputStream.available0(Native Method)
-	at java.base/java.io.FileInputStream.available(FileInputStream.java:415)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
-	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:182)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
-	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
-	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
-	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testscript.LoginTest.verifyUserIsAbleToLoginUsingValidCredentials(LoginTest.java:17)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscript.LogoutTest#verifyUserLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testscript.LogoutTest.verifyUserLogout(LogoutTest.java:16)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0XB5B9B25F
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-	... 26 more
-... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testscript.LoginTest#verifyUserIsAbleToLoginUsingValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testscript.LoginTest#verifyUserLoginWithInvalidUsernameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testscript.LoginTest#verifyUserLoginWithInvalidUsernameValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testscript.LoginTest#verifyUserloginWithValidUsernameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testscript.LogoutTest#verifyUserLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirefoxTest</h2><h3 id="m7">testscript.LoginTest#verifyUserIsAbleToLoginUsingValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">testscript.LoginTest#verifyUserLoginWithInvalidUsernameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">testscript.LoginTest#verifyUserLoginWithInvalidUsernameValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">testscript.LoginTest#verifyUserloginWithValidUsernameInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">testscript.LogoutTest#verifyUserLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testscript.ManageContactTest#managingContactDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscript.ManageContactTest#validateUpdateBtnAvailable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
