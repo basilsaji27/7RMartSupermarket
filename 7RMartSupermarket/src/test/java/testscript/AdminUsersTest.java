@@ -27,8 +27,8 @@ public class AdminUsersTest extends Base{
 		//String adminpassword = ExcelUtility.getStringData(4, 1, "AdminUsers");
 		//AdminUsersPage adminuserspage = new AdminUsersPage(driver);
 		FakerUtility fakerutility = new FakerUtility();
-		String adminusername = fakerutility.createARandomFirstName();
-		String adminpassword = fakerutility.createARandomFirstName();
+		String adminusername = fakerutility.createARandomLastName();
+		String adminpassword = fakerutility.createARandomLastName();
 		//adminuserspage.clickMoreInfoForAdminUsers();
 		adminuserspage = logoutpage.clickMoreInfoForAdminUsers();
 		adminuserspage.clickNewActionBtnForAdminUsers().enterUsernameInAdminUsersInformations(adminusername).enterPasswordInAdminUsersInformations(adminpassword).selectUserTypeInAdminUsersInformations("partner").clickSaveBtnInAdminUsers();
