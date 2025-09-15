@@ -21,7 +21,8 @@ import utilities.WaitUtility;
 
 public class Base {
 	WebDriver driver;
-	public Properties properties; //To read the URL
+	public Properties properties; // To read the URL
+
 	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
 	public void browserInitialization(String browser) throws Exception {
@@ -32,28 +33,22 @@ public class Base {
 		} catch (Exception e) {
 			System.out.println("File Not Found!");
 		}
-		if(browser.equalsIgnoreCase("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-		}
-		else if (browser.equalsIgnoreCase("firefox")) {
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-		}
-		else if (browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver()
-		    .clearResolutionCache()
-		    .forceDownload()
-		    .setup();
+		} else if (browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().clearResolutionCache().forceDownload().setup();
 			driver = new EdgeDriver();
-		}
-		else {
+		} else {
 			throw new Exception("Select proper browser");
 		}
-		//driver = new ChromeDriver();
+		// driver = new ChromeDriver();
 		driver.get(properties.getProperty("url"));
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
-			driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
+		driver.manage().window().maximize();
 	}
-	
+
 	@AfterMethod(alwaysRun = true)
 	public void browserQuit(ITestResult iTestResult) throws IOException {
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
