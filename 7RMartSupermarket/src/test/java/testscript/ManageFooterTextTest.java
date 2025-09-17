@@ -17,7 +17,7 @@ public class ManageFooterTextTest extends Base {
 
 	@Test(groups = {
 			"regression" }, retryAnalyzer = retry.Retry.class, description = "Testcase for managing footer details")
-	public void manageFooterTextUpdate() throws Exception {
+	public void verifyAbleToManageFooterDetails() throws Exception {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
@@ -46,7 +46,7 @@ public class ManageFooterTextTest extends Base {
 	}
 
 	@Test(retryAnalyzer = retry.Retry.class, description = "Testcase for validating button in Manage Footer")
-	public void validateUpdateBtnPresent() throws IOException, Exception {
+	public void verifyUpdateButtonAvailableInManageFooterDetails() throws IOException, Exception {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);

@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-12T01:35:11 IST" name="Suite" finished-at="2025-09-12T01:35:22 IST" duration-ms="11187">
+  <suite started-at="2025-09-17T20:19:04 IST" name="Suite" finished-at="2025-09-17T20:19:14 IST" duration-ms="10637">
     <groups>
       <group name="regression">
-        <method signature="ManageContactTest.managingContactDetails()[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" name="managingContactDetails" class="testscript.ManageContactTest"/>
+        <method signature="ManageContactTest.managingContactDetails()[pri:0, instance:testscript.ManageContactTest@41330d4f]" name="managingContactDetails" class="testscript.ManageContactTest"/>
       </group> <!-- regression -->
     </groups>
-    <test started-at="2025-09-12T01:35:11 IST" name="Test" finished-at="2025-09-12T01:35:22 IST" duration-ms="11187">
+    <test started-at="2025-09-17T20:19:04 IST" name="Test" finished-at="2025-09-17T20:19:14 IST" duration-ms="10637">
       <class name="testscript.ManageContactTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" started-at="2025-09-12T01:35:11 IST" name="browserInitialization" finished-at="2025-09-12T01:35:14 IST" duration-ms="2608" status="PASS">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@41330d4f]" started-at="2025-09-17T20:19:04 IST" name="browserInitialization" finished-at="2025-09-17T20:19:07 IST" duration-ms="3504" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,22 +21,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="managingContactDetails()[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" started-at="2025-09-12T01:35:14 IST" name="managingContactDetails" description="Testcase for updating contact details" finished-at="2025-09-12T01:35:18 IST" duration-ms="4456" status="PASS">
+        <test-method signature="managingContactDetails()[pri:0, instance:testscript.ManageContactTest@41330d4f]" started-at="2025-09-17T20:19:07 IST" name="managingContactDetails" description="Testcase for updating contact details" finished-at="2025-09-17T20:19:11 IST" duration-ms="3440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- managingContactDetails -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" started-at="2025-09-12T01:35:18 IST" name="browserQuit" finished-at="2025-09-12T01:35:19 IST" duration-ms="308" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageContactTest@41330d4f]" started-at="2025-09-17T20:19:11 IST" name="browserQuit" finished-at="2025-09-17T20:19:11 IST" duration-ms="236" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=managingContactDetails status=SUCCESS method=ManageContactTest.managingContactDetails()[pri:0, instance:testscript.ManageContactTest@6a4f1a55] output={null}]]]>
+                <![CDATA[[TestResult name=managingContactDetails status=SUCCESS method=ManageContactTest.managingContactDetails()[pri:0, instance:testscript.ManageContactTest@41330d4f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" started-at="2025-09-12T01:35:19 IST" name="browserInitialization" finished-at="2025-09-12T01:35:21 IST" duration-ms="1872" status="PASS">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@41330d4f]" started-at="2025-09-17T20:19:11 IST" name="browserInitialization" finished-at="2025-09-17T20:19:13 IST" duration-ms="1972" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,15 +47,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="validateUpdateBtnAvailable()[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" started-at="2025-09-12T01:35:21 IST" name="validateUpdateBtnAvailable" description="TC for verifying Update button enabled or not" finished-at="2025-09-12T01:35:22 IST" duration-ms="1571" status="PASS">
+        <test-method signature="validateUpdateBtnAvailable()[pri:0, instance:testscript.ManageContactTest@41330d4f]" started-at="2025-09-17T20:19:13 IST" name="validateUpdateBtnAvailable" description="TC for verifying Update button enabled or not" finished-at="2025-09-17T20:19:14 IST" duration-ms="1139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateUpdateBtnAvailable -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageContactTest@6a4f1a55]" started-at="2025-09-12T01:35:22 IST" name="browserQuit" finished-at="2025-09-12T01:35:22 IST" duration-ms="264" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageContactTest@41330d4f]" started-at="2025-09-17T20:19:14 IST" name="browserQuit" finished-at="2025-09-17T20:19:14 IST" duration-ms="275" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateUpdateBtnAvailable status=SUCCESS method=ManageContactTest.validateUpdateBtnAvailable()[pri:0, instance:testscript.ManageContactTest@6a4f1a55] output={null}]]]>
+                <![CDATA[[TestResult name=validateUpdateBtnAvailable status=SUCCESS method=ManageContactTest.validateUpdateBtnAvailable()[pri:0, instance:testscript.ManageContactTest@41330d4f] output={null}]]]>
               </value>
             </param>
           </params>

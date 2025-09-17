@@ -15,7 +15,7 @@ public class ManageContactTest extends Base {
 
 	@Test(groups = {
 			"regression" }, retryAnalyzer = retry.Retry.class, description = "Testcase for updating contact details")
-	public void managingContactDetails() throws Exception {
+	public void verifyAbleToManageContactDetails() throws Exception {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
@@ -44,7 +44,7 @@ public class ManageContactTest extends Base {
 	}
 
 	@Test(retryAnalyzer = retry.Retry.class, description = "TC for verifying Update button enabled or not")
-	public void validateUpdateBtnAvailable() throws Exception {
+	public void verifyUpdateButtonIsAvailableInManageContactPage() throws Exception {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);

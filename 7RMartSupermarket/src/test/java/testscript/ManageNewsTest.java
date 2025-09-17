@@ -14,7 +14,7 @@ public class ManageNewsTest extends Base {
 	LogoutPage logoutpage;
 
 	@Test(retryAnalyzer = retry.Retry.class, description = "Testcase for creating new news")
-	public void creatingnewNews() throws IOException {
+	public void verifytheCreationOfNewNews() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
@@ -32,7 +32,7 @@ public class ManageNewsTest extends Base {
 	}
 
 	@Test(retryAnalyzer = retry.Retry.class, description = "Testcase for updating news")
-	public void updateExistingNews() throws Exception {
+	public void verifytheUpdationOfExistingNews() throws Exception {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);

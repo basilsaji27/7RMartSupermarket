@@ -17,7 +17,7 @@ public class AdminUsersTest extends Base {
 	LogoutPage logoutpage;
 
 	@Test(retryAnalyzer = retry.Retry.class, description = "Testcase to create a new admin user")
-	public void createAdminUser() throws IOException {
+	public void verifyAbleToCreateNewAdminUser() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);

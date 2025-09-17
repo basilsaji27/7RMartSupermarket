@@ -17,7 +17,7 @@ public class ManageCategoryTest extends Base {
 	LogoutPage logoutpage;
 
 	@Test(retryAnalyzer = retry.Retry.class, description = "TC for adding new category item")
-	public void addNewCategory() throws IOException {
+	public void verifyAbleToAddNewCategory() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
