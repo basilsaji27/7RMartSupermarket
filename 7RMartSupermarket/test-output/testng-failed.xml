@@ -5,18 +5,59 @@
     <listener class-name="generateReport.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <classes>
+      <class name="testscript.ManageNewsTest">
+        <methods>
+          <include name="verifytheCreationOfNewNews"/>
+          <include name="verifytheUpdationOfExistingNews"/>
+          <include name="browserInitialization"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.ManageNewsTest -->
+      <class name="testscript.LoginTest">
+        <methods>
+          <include name="verifyUserLoginWithInvalidUsernameValidPassword"/>
+          <include name="verifyUserloginWithValidUsernameInvalidPassword"/>
+          <include name="browserInitialization"/>
+          <include name="verifyUserIsAbleToLoginUsingValidCredentials"/>
+          <include name="browserQuit"/>
+          <include name="verifyUserLoginWithInvalidUsernameInvalidPassword"/>
+        </methods>
+      </class> <!-- testscript.LoginTest -->
       <class name="testscript.AdminUsersTest">
         <methods>
-          <include name="createAdminUser"/>
+          <include name="verifyAbleToCreateNewAdminUser"/>
           <include name="browserInitialization"/>
           <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.AdminUsersTest -->
+      <class name="testscript.ManageContactTest">
+        <methods>
+          <include name="verifyAbleToManageContactDetails"/>
+          <include name="verifyUpdateButtonIsAvailableInManageContactPage"/>
+          <include name="browserInitialization"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.ManageContactTest -->
+      <class name="testscript.LogoutTest">
+        <methods>
+          <include name="verifyUserAbleToLogout"/>
+          <include name="browserInitialization"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.LogoutTest -->
+      <class name="testscript.ManageFooterTextTest">
+        <methods>
+          <include name="verifyAbleToManageFooterDetails"/>
+          <include name="verifyUpdateButtonIsAvailableInManageFooterDetails"/>
+          <include name="browserInitialization"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- testscript.ManageFooterTextTest -->
       <class name="testscript.ManageCategoryTest">
         <methods>
-          <include name="addNewCategory"/>
+          <include name="verifyAbleToAddNewCategory"/>
           <include name="browserInitialization"/>
           <include name="browserQuit"/>
         </methods>

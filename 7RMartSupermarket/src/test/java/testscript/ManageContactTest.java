@@ -29,8 +29,8 @@ public class ManageContactTest extends Base {
 		String delivery_charge_limit = ExcelUtility.getIntegerData(5, 0, "ManageContactPage");
 		// ManageContactPage managecontactpage = new ManageContactPage(driver);
 		managecontactpage = logoutpage.clickMoreInfoOfManageContact();
-		managecontactpage.clickContactUsActionBtn().addingPhone(phone).addingEmail(email).addingAddress(address)
-				.addingDeliveryTime(delivery_time).addingDeliveryChargeLimit(delivery_charge_limit).clickingUpdateBtn();
+		managecontactpage.clickContactUsActionBtn().enterPhoneNumber(phone).enterEmail(email).enterAddressDetails(address)
+				.enterDeliveryTime(delivery_time).enterDeliveryChargeLimit(delivery_charge_limit).clickUpdateButton();
 		/*
 		 * '''managecontactpage.addingPhone(phone);
 		 * managecontactpage.addingEmail(email);

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageContactPage {
 
@@ -41,38 +42,39 @@ public class ManageContactPage {
 	 */
 	public ManageContactPage clickContactUsActionBtn() throws Exception {
 		contactUsActionBtn.click();
-		// Thread.sleep(2000);
+		Thread.sleep(2000);
 		return this;
 	}
 
-	public ManageContactPage addingPhone(String phone) {
+	public ManageContactPage enterPhoneNumber(String phone) {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForElementToBeClickable(driver, contactUsPhoneTextField);
 		contactUsPhoneTextField.clear();
 		contactUsPhoneTextField.sendKeys(phone);
-		PageUtility pageUtility = new PageUtility();
-		//pageUtility.jsSendKeys(driver, contactUsPhoneTextField, phone);
-		pageUtility.scrollFromTop(driver);
 		return this;
 	}
 
-	public ManageContactPage addingEmail(String email) {
+	public ManageContactPage enterEmail(String email) {
 		contactUsEmailIdTextField.clear();
 		contactUsEmailIdTextField.sendKeys(email);
 		return this;
 	}
 
-	public ManageContactPage addingAddress(String address) {
+	public ManageContactPage enterAddressDetails(String address) {
 		contactUsAddress.clear();
 		contactUsAddress.sendKeys(address);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollFromTop(driver);
 		return this;
 	}
 
-	public ManageContactPage addingDeliveryTime(String delivery_time) {
+	public ManageContactPage enterDeliveryTime(String delivery_time) {
 		contactUsDeliveryTime.clear();
 		contactUsDeliveryTime.sendKeys(delivery_time);
 		return this;
 	}
 
-	public ManageContactPage addingDeliveryChargeLimit(String delivery_charge_limit) {
+	public ManageContactPage enterDeliveryChargeLimit(String delivery_charge_limit) {
 		contactUsDeliveryChargeLimit.clear();
 		contactUsDeliveryChargeLimit.sendKeys(delivery_charge_limit);
 		PageUtility pageUtility = new PageUtility();
@@ -80,7 +82,7 @@ public class ManageContactPage {
 		return this;
 	}
 
-	public ManageContactPage clickingUpdateBtn() {
+	public ManageContactPage clickUpdateButton() {
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.jsClick(driver, contactUsUpdateBtn);
 		return this;

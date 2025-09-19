@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.ManageContactTest" class="method navigator-link" hash-for-method="managingContactDetails">managingContactDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testscript.ManageContactTest" class="method navigator-link" hash-for-method="verifyAbleToManageContactDetails">verifyAbleToManageContactDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.ManageContactTest" class="method navigator-link" hash-for-method="validateUpdateBtnAvailable">validateUpdateBtnAvailable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testscript.ManageContactTest" class="method navigator-link" hash-for-method="verifyUpdateButtonIsAvailableInManageContactPage">verifyUpdateButtonIsAvailableInManageContactPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -131,18 +131,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="managingContactDetails">
-                  </a> <!-- managingContactDetails -->
-                  <span class="method-name">managingContactDetails</span>
+                  <a name="verifyAbleToManageContactDetails">
+                  </a> <!-- verifyAbleToManageContactDetails -->
+                  <span class="method-name">verifyAbleToManageContactDetails</span>
                   <em>
 (Testcase for updating contact details)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateUpdateBtnAvailable">
-                  </a> <!-- validateUpdateBtnAvailable -->
-                  <span class="method-name">validateUpdateBtnAvailable</span>
+                  <a name="verifyUpdateButtonIsAvailableInManageContactPage">
+                  </a> <!-- verifyUpdateButtonIsAvailableInManageContactPage -->
+                  <span class="method-name">verifyUpdateButtonIsAvailableInManageContactPage</span>
                   <em>
 (TC for verifying Update button enabled or not)                  </em>
                 </div> <!-- method-content -->
@@ -163,7 +163,7 @@
     &lt;listener class-name=&quot;generateReport.Listeners&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testscript.ManageContactTest&quot;/&gt;
     &lt;/classes&gt;
@@ -193,7 +193,7 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">managingContactDetails</span>
+                <span class="method-in-group-name">verifyAbleToManageContactDetails</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -215,18 +215,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'managingContactDetails')
+data.setCell(0, 1, 'verifyAbleToManageContactDetails')
 data.setCell(0, 2, 'testscript.ManageContactTest')
-data.setCell(0, 3, 3440);
+data.setCell(0, 3, 5398);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateUpdateBtnAvailable')
+data.setCell(1, 1, 'verifyUpdateButtonIsAvailableInManageContactPage')
 data.setCell(1, 2, 'testscript.ManageContactTest')
-data.setCell(1, 3, 1139);
+data.setCell(1, 3, 3329);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -254,28 +254,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageContactTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">browserInitialization(chrome)</span>
+                <span class="method-name">browserInitialization(edge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">managingContactDetails</span>
-                <span class="method-start">3505 ms</span>
+                <span class="method-name">verifyAbleToManageContactDetails</span>
+                <span class="method-start">3438 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=managingContactDetails status=SUCCESS method=ManageContactTest.managingContactDetai...)</span>
-                <span class="method-start">6952 ms</span>
+                <span class="method-name">browserQuit([TestResult name=verifyAbleToManageContactDetails status=SUCCESS method=ManageContactTest.verifyAble...)</span>
+                <span class="method-start">8843 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">browserInitialization(chrome)</span>
-                <span class="method-start">7192 ms</span>
+                <span class="method-name">browserInitialization(edge)</span>
+                <span class="method-start">9119 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validateUpdateBtnAvailable</span>
-                <span class="method-start">9164 ms</span>
+                <span class="method-name">verifyUpdateButtonIsAvailableInManageContactPage</span>
+                <span class="method-start">11143 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=validateUpdateBtnAvailable status=SUCCESS method=ManageContactTest.validateUpdateBt...)</span>
-                <span class="method-start">10304 ms</span>
+                <span class="method-name">browserQuit([TestResult name=verifyUpdateButtonIsAvailableInManageContactPage status=SUCCESS method=ManageContac...)</span>
+                <span class="method-start">14472 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
